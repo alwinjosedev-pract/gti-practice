@@ -1,6 +1,8 @@
 services:
   web:
-    build: .
+    image: docker-app-web:v2
     environment:
       APP_NAME: ${APP_NAME}
-      APP_ENV:  ${APP_ENV}
+      APP_ENV: ${APP_ENV}
+    ports:
+      - "8085:80"
